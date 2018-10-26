@@ -4,7 +4,7 @@ import "./index.css";
 import { ApolloProvider } from "react-apollo";
 import registerServiceWorker from "./registerServiceWorker";
 import ApolloClient from "apollo-boost";
-import AllContact from "./components/App";
+import App from "./components/App";
 
 const client = new ApolloClient({
   uri: "http://localhost:4000"
@@ -12,7 +12,7 @@ const client = new ApolloClient({
 
 ReactDOM.render(
   <ApolloProvider client={client}>
-    <AllContact />
+    <App />,
   </ApolloProvider>,
   document.getElementById("root")
 );
